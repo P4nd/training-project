@@ -1,18 +1,27 @@
 # Entities
 
+
+
 ## **User**
+
 Id, Name, Document, DoB, Gender, OccupationId
+
 
 ## Occupation
 Id, Name
 
+
 ## Role
 Id, Name
 
+
 ## UserRoles
-Id, Name
+Id, UserId, RoleId
+
 
 # Repositories
+
+
 
 ## UserRepository
 
@@ -43,7 +52,9 @@ Id, Name
 - Delete one
   
 
-# Endpoint { /api/user }
+# UserController
+
+/api/user
 
 ## POST - Create
 
@@ -57,4 +68,44 @@ Id, Name
 { Json Body } 200 Ok | 304 Not Modified | 406 Not Acceptable | 500 Internal Server Error
 
 ## DELETE - Remove
+{ Query Parameter - Id } 200 Ok| 404 Not Found | 403 Forbidden | 500 Internal Server Error
+
+
+
+# RoleController
+
+/api/role
+
+## POST - Create
+
+{ Json Body } 200 Ok | 406 Not Acceptable | 500 Internal Server Error
+
+## GET - Retrieve
+
+200 Ok | 204 No Content | 500 Internal Server Error
+
+## PUT - Update
+
+{ Json Body } 200 Ok | 304 Not Modified | 406 Not Acceptable | 500 Internal Server Error
+
+## DELETE - Remove
+
+{ Query Parameter - Id } 200 Ok| 404 Not Found | 403 Forbidden | 500 Internal Server Error
+
+
+
+# UserRolesController
+
+/api/user-roles
+
+## POST - Create
+
+{ Json Body } 200 Ok | 406 Not Acceptable | 500 Internal Server Error
+
+## GET - Retrieve
+
+200 Ok | 204 No Content | 500 Internal Server Error
+
+## DELETE - Remove
+
 { Query Parameter - Id } 200 Ok| 404 Not Found | 403 Forbidden | 500 Internal Server Error
