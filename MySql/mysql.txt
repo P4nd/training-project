@@ -1,0 +1,6 @@
+
+docker exec -it mysql_local mysql -uroot -p
+
+Enter password: NdL5PAK9MG4GJFiX9MKmKeDGEF
+
+Mysql > Show databases;
